@@ -110,6 +110,10 @@ watch 옵션은 비동기 연산 수행, 연산 수행 제한, 중간 상태 설
 Vue instance는 객체로 생성되거나 업데이트 되고 DOM에 마운트 하면서 초기화 단계를 거치는데,
 그 초기화 단계에 custom logic을 삽입하기 위한 방법
 
+beforeCreate 에는 instance 가 생성되고 Vue instance의 property (data, watch ...) 가 설정되기 전에 호출되는 hook 이다.
+
+created 는 Vue instance 의 property 가 set 된 후 호출되는 hook 이다. 그래서 data에 있는 객체에 접근하는 custom logic 을 만드는 경우 이곳에서 부터 할 수 있다.
+
 create, mount, update, destroy 앞 뒤에 넣을 수 있다.
 
 ```javascript
